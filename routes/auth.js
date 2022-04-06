@@ -1,3 +1,10 @@
+const express = require("express");
+const router = new express.Router();
+const ExpressError = require("../expressError.js")
+const db = require("../db");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+
 /** POST /login - login: {username, password} => {token}
  *
  * Make sure to update their last-login!
